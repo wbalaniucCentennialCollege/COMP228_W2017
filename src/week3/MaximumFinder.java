@@ -23,8 +23,8 @@ public class MaximumFinder {
 	
 	public static double maximum(double x, double y, double z) {
 		
-		// return Math.max(x, Math.max(y,z));
-		
+		return Math.max(x, Math.max(y,z));
+		/*
 		double maximumValue = x;
 		
 		if(y > maximumValue) {
@@ -36,7 +36,7 @@ public class MaximumFinder {
 		}
 		
 		return maximumValue;
-		
+		*/
 	}
 
 }
