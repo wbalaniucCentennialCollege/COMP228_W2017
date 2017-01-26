@@ -23,17 +23,6 @@ public class MaximumFinder {
 	
 	public static double maximum(double x, double y, double z) {
 		
-		int something = 7;
-		
-		/*
-		 * 
-		 * 
-		 * 
-		 * 
-		 */
-
-		int somethingElse = 10;
-		
 		return Math.max(x, Math.max(y,z));
 		/*
 		double maximumValue = x;
