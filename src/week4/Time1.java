@@ -6,16 +6,17 @@ public class Time1 {
 	private int second = 0; // 0 - 59
 	
 	public void setTime(int hour, int minute, int second) {
-		if (hour < 0 || hour >= 24 || 		// Hour check
-			minute < 0 || minute >= 60 || 	// Minute check
-			second < 0 || second >= 60) 	// Second check
-		{
+		if(	(hour >= 0 && hour < 24) && 
+			(minute >= 0 && minute < 60) && 
+			(second >= 0 && second < 60)) {
+			
+			this.hour = hour;
+			this.minute = minute;
+			this.second = second;
+		}
+		else {
 			throw new IllegalArgumentException("Hour, minute and/or second was out of range");
 		}
-		
-		this.hour = hour;
-		this.minute = minute;
-		this.second = second;
 	}
 	
 	// Convert to string in universal-time format (HH:MM:SS)
