@@ -1,5 +1,4 @@
-import week6.Employee;
-
+package week6;
 public class HourlyEmployee extends Employee {
 
 	private double wage;
