@@ -30,6 +30,56 @@ public class LayoutManagersTest extends JFrame {
 		bEast = new JButton("East");
 		bSouth1 = new JButton("Java Programming");
 		bSouth2 = new JButton("COMP228");
+		
+		/* PANEL NORTH */
+		// Register button events
+		ButtonHandler handler = new ButtonHandler();
+		left.addActionListener(handler);
+		center.addActionListener(handler);
+		right.addActionListener(handler);
+		
+		// Add components to the panel
+		pNorth.add(left);
+		pNorth.add(right);
+		pNorth.add(center);
+		pNorth.setBackground(Color.RED);
+		
+		/* PANEL CENTER */
+		pCenter.setLayout(new GridLayout(2,2,5,5));
+		
+		lblName = new JLabel("Name: ");
+		lblPosition = new JLabel("Position: ");
+		txtName = new JTextField(20);
+		txtPosition = new JTextField(20);
+		
+		pCenter.add(lblName);
+		pCenter.add(txtName);
+		pCenter.add(lblPosition);
+		pCenter.add(txtPosition);
+		
+		pCenter.setBackground(Color.GREEN);
+		
+		/* PANEL EAST */
+		pEast.add(bEast);
+		pEast.setBackground(Color.ORANGE);
+		
+		/* PANEL WEST */
+		pWest.add(bWest);
+		pWest.setBackground(Color.PINK);
+		
+		/* PANEL SOUTH */
+		pSouth.add(bSouth1);
+		pSouth.add(bSouth2);
+		pSouth.setBackground(Color.LIGHT_GRAY);
+		
+		// Add Panels to the JFrame
+		add(pNorth, BorderLayout.NORTH);
+		add(pCenter, BorderLayout.CENTER);
+		add(pEast, BorderLayout.EAST);
+		add(pWest, BorderLayout.WEST);
+		add(pSouth, BorderLayout.SOUTH);
+		
+		pack();
 	}
 	
 	// Private inner class
@@ -55,7 +105,10 @@ public class LayoutManagersTest extends JFrame {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		LayoutManagersTest testLayoutManagers1 = new LayoutManagersTest();
+		testLayoutManagers1.setTitle("TESTING LAYOUT MANAGERS");
+		testLayoutManagers1.setSize(500, 300);
+		testLayoutManagers1.setVisible(true);
 	}
 
 }
