@@ -12,7 +12,7 @@ public class SimpleArray {
 		array = new int[size];
 	}
 	
-	public void add(int value) {
+	public synchronized void add(int value) {
 		int position = writeIndex;
 		
 		try {
@@ -33,7 +33,7 @@ public class SimpleArray {
 	}
 	
 	// Format array to look nice
-	public String toString() {
+	public synchronized String toString() {
 		return Arrays.toString(array);
 	}
 }
